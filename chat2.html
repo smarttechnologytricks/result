@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Student Marks Table</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin: 0 0 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            padding: 8px 12px;
+            text-align: center;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .link {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .marks {
+            display: none;
+        }
+        .review {
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://i.pinimg.com/originals/90/e8/d9/90e8d948871ff447b4ad5408ca728244.jpg" alt="Banner">
+    </div>
+    <h1>Student Marks Table</h1>
+    <h5><a href= "mailto: mrfakusingh@gmail.com">कुछ लोगों के अंक उनकी भावनाओं को ठेस न पहुँचाने के लिए edit किया गया है। अगर आप अपना अंक हटाना चाहते हैं, तो कृपया ईमेल भेजें। click here</a></h5>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Roll No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Marks</th>
+                <th scope="col" class="review">Review</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2320540050001</td>
+                <td>ABHISHEK KUMAR</td>
+                <td class="marks">291</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050002</td>
+                <td>ABHISHEK KUMAR</td>
+                <td class="marks">268</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050003</td>
+                <td>ABHISHEK KUMAR SINGH</td>
+                <td class="marks">290</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050004</td>
+                <td>ABHISHEK SINGH</td>
+                <td class="marks">314</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050005</td>
+                <td>ADITYA AZAD</td>
+                <td class="marks">319</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050006</td>
+                <td>ADITYA KUMAR</td>
+                <td class="marks">284</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050007</td>
+                <td>ADITYA KUMAR SAURABH</td>
+                <td class="marks">290</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050008</td>
+                <td>ADITYA RAJ</td>
+                <td class="marks">333</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050009</td>
+                <td>ADITYA RAJ</td>
+                <td class="marks">499</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+                <td><span class="material-symbols-outlined">
+                    verified
+                    </span> Topper</td>
+            </tr>
+            <tr>
+                <td>2320540050010</td>
+                <td>AKASH PATEL</td>
+                <td class="marks">325</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050011</td>
+                <td>AKHAND SHARMA</td>
+                <td class="marks">332</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050012</td>
+                <td>AKHILESH KUMAR</td>
+                <td class="marks">263</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050013</td>
+                <td>AMAN KUMAR</td>
+                <td class="marks">321</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050015</td>
+                <td>AMITESH KUMAR RA</td>
+                <td class="marks">285</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050016</td>
+                <td>ANAND KUMAR</td>
+                <td class="marks">289</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050017</td>
+                <td>ANAND KUMAR</td>
+                <td class="marks">296</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050018</td>
+                <td>ANIKET KUMAR</td>
+                <td class="marks">295</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050019</td>
+                <td>ANJANI KUMARI</td>
+                <td class="marks">315</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2320540050020</td>
+                <td>ANKIT DWIVEDI</td>
+                <td class="marks">315</td>
+                <td class="actions">
+                    <button class="button" onclick="showMarks(this)">View</button>
+                </td>
+            </tr>
+            
+        <tr><td>2320540050021</td><td>ANKIT KUMAR</td><td class="marks">206</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td><td><span class="material-symbols-outlined">grade</span> Star Performer</td></tr>
+        <tr><td>2320540050022</td><td>ANNU KUMARI</td><td class="marks">302</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        <tr><td>2320540050023</td><td>ARPAN KUMAR</td><td class="marks">307</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050024</td><td>ARVIND KUMAR</td><td class="marks">218</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td><td><span class="material-symbols-outlined">military_tech</span> Nice Performence</td></td></tr>
+        <tr><td>2320540050025</td><td>ARYAN SINGH</td><td class="marks">267</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        <tr><td>2320540050026</td><td>ASHIF RAJA</td><td class="marks">294</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        <tr><td>2320540050027</td><td>AVINASH KUMAR</td><td class="marks">277</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        <tr><td>2320540050028</td><td>AYUSH KUMAR</td><td class="marks">265</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        <tr><td>2320540050029</td><td>AYUSH KUMAR</td><td class="marks">257</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        <tr><td>2320540050030</td><td>AZIZUR RAHMAN</td><td class="marks">283</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        <tr><td>2320540050031</td><td>DEEP NARAYAN</td><td class="marks">320</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        <tr><td>2320540050032</td><td>DEEPAK KUMAR</td><td class="marks">324</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        <tr><td>2320540050033</td><td>DWIJ SHARMA</td><td class="marks">336</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050034</td><td>FIZA AKHTAR</td><td class="marks">302</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050035</td><td>GANESH RAJ</td><td class="marks">276</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050036</td><td>GAUTAM KUMAR</td><td class="marks">259</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050037</td><td>GOKULENDRA PATHAK</td><td class="marks">309</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050038</td><td>GOLU KUMAR</td><td class="marks">284</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050039</td><td>GULSHAN KUMAR</td><td class="marks">277</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050040</td><td>JHA ANKIT KUMAR</td><td class="marks">328</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050041</td><td>KHUSHVANT KUMAR</td><td class="marks">305</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050043</td><td>KUMAR SAURAV</td><td class="marks">281</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050044</td><td>MANISH KUMAR</td><td class="marks">278</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050045</td><td>MD AYUB</td><td class="marks">278</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050046</td><td>NIKHIL KUMAR</td><td class="marks">315</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050047</td><td>PRAKASH SHEKHAR</td><td class="marks">289</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+
+        <tr><td>2320540050048</td><td>PRIYANSHU KUMAR</td><td class="marks">350</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td><td><span class="material-symbols-outlined">sentiment_dissatisfied</span> Better Luck Next Time</td></tr>
+    
+        <tr><td>2320540050049</td><td>PRIYANSHU RAJ</td><td class="marks">297</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050050</td><td>PUSHKAR KUMAR</td><td class="marks">276</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050051</td><td>RAJ KAMAL RAJ</td><td class="marks">274</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050052</td><td>RAM RANJAN</td><td class="marks">255</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050053</td><td>RANVEER SINGH</td><td class="marks">274</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050054</td><td>RAUSHAN KUMAR</td><td class="marks">312</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050055</td><td>RAUSHAN KUMAR</td><td class="marks">293</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050057</td><td>RAVI ARYA</td><td class="marks">298</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050058</td><td>RISHABH KUMAR</td><td class="marks">272</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050059</td><td>RITIK KUMAR</td><td class="marks">330</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050060</td><td>RITIK KUMAR GUPTA</td><td class="marks">323</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050061</td><td>ROHIT KUMAR</td><td class="marks">283</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050062</td><td>ROHIT RAJ</td><td class="marks">322</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050063</td><td>ROHIT SINGH</td><td class="marks">330</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050064</td><td>SANDEEP KUMAR SINGH</td><td class="marks">318</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050065</td><td>SARTHAK KUMAR</td><td class="marks">295</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050066</td><td>SATYAM KUMAR</td><td class="marks">319</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050067</td><td>SAURABH NARAYAN SINGH</td><td class="marks">313</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050068</td><td>SHAILESH KUMAR PAL</td><td class="marks">295</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050069</td><td>SHIVAM KUMAR</td><td class="marks">329</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050070</td><td>SHIVAM RANJAN</td><td class="marks">299</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050072</td><td>SHUBHAM KUMAR</td><td class="marks">278</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050073</td><td>SHUBHAM KUMAR SINGH</td><td class="marks">315</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050074</td><td>SONU KUMAR RAM</td><td class="marks">257</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050075</td><td>SONU PANDEY</td><td class="marks">313</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+
+        <tr><td>2320540050076</td><td>SOURAV KUMAR</td><td class="marks">279</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050077</td><td>SUNNY KUMAR GUPTA</td><td class="marks">254</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050078</td><td>SURYA DEV SINGH</td><td class="marks">289</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050079</td><td>TINKU SHARMA</td><td class="marks">298</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+
+        <tr><td>2320540050080</td><td>UJJAWAL SINGH</td><td class="marks">275</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+
+        <tr><td>2320540050080</td><td>VIVEK KUMAR</td><td class="marks">324</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    
+        <tr><td>2320540050082</td><td>VIVEK KUMAR</td><td class="marks">290</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+        
+        <tr><td>2320540050083</td><td>VIVEK KUMAR</td><td class="marks">294</td><td class="actions"><button class="button" onclick="showMarks(this)">View</button></td></tr>
+    </tbody>
+    </table>
+    <footer>
+
+    </footer>
+
+    <script>
+        function showMarks(button) {
+            var marksCell = button.parentElement.previousElementSibling;
+            marksCell.style.display = 'table-cell';
+            button.style.display = 'none';
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/72a2929fd0.js" crossorigin="anonymous"></script>
+</body>
+</html>
